@@ -30,9 +30,9 @@ const TodoHeadBlock = styled.div`
   }
 `;
 
-function TodoHead({undoneTasks}) {
+function TodoHead() {
   const todos = useTodoState();
-  // const undoneTasks = todos.filter(todo => !todo.done);
+  const undoneTasks = todos.filter(todo => !todo.done);
 
   const today = new Date();
   const dateString = today.toLocaleDateString('ko-KR', {
